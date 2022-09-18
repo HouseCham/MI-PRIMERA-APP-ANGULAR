@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row text-center">
+        <h1>Mi pagina de angular</h1>
+        <button class="btn btn-primary mt-5" style="width: fit-content; margin-left: auto;margin-right: auto;" [disabled]='deshabilitar' (click)="agregarPersona()">
+            Agregar persona
+        </button>
+        <p *ngIf="mostrar, else mensajeVacio">{{ mensaje }}</p>
+        <ng-template #mensajeVacio>
+            <p>No hay mensaje aun paps</p>
+        </ng-template>
+        <h1>Titulo Persona</h1>
+        <input type="text" class="form-control" name="titulo" id="titulo" [(ngModel)]='titulo'>
+        {{ titulo }}
+    </div>
+</div>

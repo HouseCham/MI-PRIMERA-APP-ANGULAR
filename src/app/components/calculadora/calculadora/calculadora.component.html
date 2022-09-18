@@ -1,0 +1,21 @@
+<div class="container mt-4">
+    <div class="row text-center mb-5">
+        <h1>Calculadora que solo suma xd</h1>
+    </div>
+    <div>
+        <form>
+            <div class="form-floating mb-3">
+                <input type="number" class="form-control" id="sumando1" name="sumando1" placeholder="sumando1" [(ngModel)]="sumando1">
+                <label for="sumando1">Sumando 1</label>
+            </div>
+            <div class="form-floating">
+                <input type="number" class="form-control" id="sumando2" name="sumando2" placeholder="sumando2" [(ngModel)]="sumando2">
+                <label for="sumando2">Sumando 2</label>
+            </div>
+            <button type="submit" class="btn btn-info w-25 mt-5 text-white" style="margin-left: auto;margin-right:auto;" (click)="sumarValores()">Sumar</button>
+        </form>
+    </div>
+    <div class="row mt-3">
+        <span>Resultado: {{ resultado }}</span>
+    </div>
+</div>
