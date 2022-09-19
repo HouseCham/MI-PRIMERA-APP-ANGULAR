@@ -5,12 +5,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { PersonasComponent } from './components/personas/personas.component';
 import { CalculadoraComponent } from './components/calculadora/calculadora/calculadora.component';
+import { PersonaComponent } from './components/persona/persona.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonasComponent,
-    CalculadoraComponent
+    CalculadoraComponent,
+    PersonaComponent
   ],
   imports: [
     BrowserModule,

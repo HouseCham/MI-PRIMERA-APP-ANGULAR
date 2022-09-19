@@ -1,0 +1,27 @@
+<div class="container text-center ">
+    <div class="row mt-4">
+        <h1> {{ titulo }}</h1>
+        <hr />
+    </div>
+    <div class="row mt-4">
+        <h5>Quieres agregar una nueva persona?</h5>
+        <form action="" class="form w-50" style="margin-left:auto;margin-right: auto;">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" [(ngModel)]="nombreInput">
+                <label for="nombre">Nombre</label>
+            </div>
+            <div class="form-floating">
+                <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellido" [(ngModel)]="apellidoInput">
+                <label for="apellido">Apellido</label>
+            </div>
+            <button type="submit" class="btn btn-primary mt-4 w-25" (click)="agregarPersona()">Agregar</button>
+        </form>
+    </div>
+    <div class="row mt-4">
+        <ul class="list-group w-50 mt-5" style="margin-left:auto;margin-right: auto;">
+            <li *ngFor="let persona of listaPersonas; let i = index" class="list-group-item">
+                {{ i + 1 }}. {{ persona.nombre }} {{ persona.apellido }}
+            </li>
+        </ul>
+    </div>
+</div>
